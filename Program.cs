@@ -4,10 +4,11 @@ using Ports_and_Adapters_example;
 ServiceCollection serviceCollection = new ServiceCollection();
 serviceCollection.AddSingleton<IOutboundPort, OutboundAdapter>();
 serviceCollection.AddSingleton<CoreApp>(); 
+serviceCollection.AddSingleton<InboundAdapter>();
 
-ServiceProvider serviceProvicer =  serviceCollection.BuildServiceProvider();
+ServiceProvider serviceProvider =  serviceCollection.BuildServiceProvider();
 
-CoreApp coreApp = serviceProvicer.GetRequiredService<CoreApp>();
-IInboundPort inboundPort = new InboundAdapter(coreApp);
+CoreApp coreApp = serviceProvider.GetRequiredService<CoreApp>();
+IInboundPort inboundPort = serviceProvider.GetRequiredService<InboundAdapter>();
 
-inboundPort.processInput("This is my Input :)");
+inboundPort.processInput("This is the Input.");
