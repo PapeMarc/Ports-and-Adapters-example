@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ports_and_Adapters_example
+namespace Ports_and_Adapters_example.CoreApp
 {
-    internal interface IOutboundPort
+    internal interface IInboundPort
     {
-        public void processOutput(string input);
+        public void processInput(string input);
     }
 }
