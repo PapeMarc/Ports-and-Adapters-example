@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Ports_and_Adapters_example;
+
+CoreApp coreApp = new CoreApp(new OutboundAdapter());
+IInboundPort inboundPort = new InboundAdapter(coreApp);
+
+inboundPort.processInput("This is my Input :)");
