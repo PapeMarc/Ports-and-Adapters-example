@@ -9,8 +9,8 @@ namespace Ports_and_Adapters_example.Infrastructure
 {
     internal class InboundAdapter : IInboundPort
     {
-        private CoreApp coreApp;
-        public InboundAdapter(CoreApp coreApp)
+        private CoreApplication coreApp;
+        public InboundAdapter(CoreApplication coreApp)
         {
             this.coreApp = coreApp;
         }

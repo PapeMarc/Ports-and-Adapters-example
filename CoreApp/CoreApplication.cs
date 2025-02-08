@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Ports_and_Adapters_example.CoreApp
 {
-    internal class CoreApp
+    internal class CoreApplication
     {
         private IOutboundPort outboundPort;
-        public CoreApp(IOutboundPort outboundPort)
+        public CoreApplication(IOutboundPort outboundPort)
         {
             this.outboundPort = outboundPort;
         }

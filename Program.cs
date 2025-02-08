@@ -5,11 +5,11 @@ using Ports_and_Adapters_example.Infrastructure;
 ServiceCollection serviceCollection = new ServiceCollection();
 serviceCollection.AddSingleton<IInboundPort, InboundAdapter>();
 serviceCollection.AddSingleton<IOutboundPort, OutboundAdapter>();
-serviceCollection.AddSingleton<CoreApp>(); 
+serviceCollection.AddSingleton<CoreApplication>(); 
 
 ServiceProvider serviceProvider =  serviceCollection.BuildServiceProvider();
 
-CoreApp coreApp = serviceProvider.GetRequiredService<CoreApp>();
+CoreApplication coreApp = serviceProvider.GetRequiredService<CoreApplication>();
 IInboundPort inboundPort = serviceProvider.GetRequiredService<IInboundPort>();
 
 inboundPort.processInput("This is the Input.");
