@@ -11,9 +11,9 @@ namespace PortsAndAdaptersExample.Tests
         public void InputAdapter_ShouldCallInboundPortWithCorrectInput()
         {
             // Arrange
-            var mockInboundPort = new Mock<IInboundPort>();
-            var adapter = new InboundAdapter(mockInboundPort.Object);
-            var input = "Test Input";
+            Mock< IInboundPort> mockInboundPort = new Mock<IInboundPort>();
+            InboundAdapter adapter = new InboundAdapter(mockInboundPort.Object);
+            string input = "Test Input";
 
             // Act
             adapter.handleInput(input);
