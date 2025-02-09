@@ -11,4 +11,8 @@ ServiceProvider serviceProvider =  serviceCollection.BuildServiceProvider();
 
 InboundAdapter inboundAdapter= serviceProvider.GetRequiredService<InboundAdapter>();
 
-inboundAdapter.handleInput("This is the Input.");
+
+Console.WriteLine("\nProgram: Calling Inbound Adapter with Input 'A'.\n");
+inboundAdapter.handleInput("A");
+
+Console.WriteLine("\n\nProgram: Finished handling Input 'A'.\n");

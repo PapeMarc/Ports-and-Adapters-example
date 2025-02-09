@@ -16,12 +16,20 @@ namespace Ports_and_Adapters_example.CoreApp
 
         public void processInput(string input)
         {
-            Console.WriteLine("Doing something ...");
+            Console.WriteLine("\n\n[Application]\n");
             Thread.Sleep(1000);
-            Console.WriteLine("Doing another thing ...");
-            Thread.Sleep(1000);
-            Console.WriteLine("Done!");
-            Thread.Sleep(100);
+            Console.WriteLine("- Recieved Input: " + input);
+            Console.Write("- Executing business rules...");
+
+            input = input + "," + input + "," + input + "," + input;
+
+            Thread.Sleep(2000);
+            Console.Write("finished.\n");
+            Console.Write("- Processing Results...");
+            Thread.Sleep(2000);
+            Console.Write("finished.\n");
+            Console.WriteLine("- Redirecting to outbound Port.");
+            Thread.Sleep(2000);
 
             outboundPort.processOutput(input);
         }
