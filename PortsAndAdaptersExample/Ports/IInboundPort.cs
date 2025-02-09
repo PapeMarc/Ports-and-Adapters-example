@@ -1,4 +1,4 @@
-﻿namespace Ports_and_Adapters_example.CoreApp
+﻿namespace PortsAndAdaptersExample.CoreApp
 {
     internal interface IInboundPort
     {

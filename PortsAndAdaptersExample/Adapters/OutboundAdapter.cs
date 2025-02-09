@@ -1,4 +1,4 @@
-﻿using Ports_and_Adapters_example.CoreApp;
+﻿using PortsAndAdaptersExample.CoreApp;
 
 namespace Ports_and_Adapters_example.Infrastructure
 {
