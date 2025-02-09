@@ -1,6 +1,6 @@
 ﻿using PortsAndAdaptersExample.CoreApp;
 
-namespace Ports_and_Adapters_example.Infrastructure
+namespace PortsAndAdaptersExample.Infrastructure
 {
     internal class OutboundAdapter: IOutboundPort
     {
