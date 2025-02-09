@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ports_and_Adapters_example.CoreApp
 {
-    internal class CoreApplication
+    internal class CoreApplication: IInboundPort
     {
         private IOutboundPort outboundPort;
         public CoreApplication(IOutboundPort outboundPort)

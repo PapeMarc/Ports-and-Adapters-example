@@ -7,17 +7,17 @@ using Ports_and_Adapters_example.CoreApp;
 
 namespace Ports_and_Adapters_example.Infrastructure
 {
-    internal class InboundAdapter : IInboundPort
+    internal class InboundAdapter
     {
-        private CoreApplication coreApp;
-        public InboundAdapter(CoreApplication coreApp)
+        private IInboundPort inboundPortApp;
+        public InboundAdapter(IInboundPort inboundPortApp)
         {
-            this.coreApp = coreApp;
+            this.inboundPortApp = inboundPortApp;
         }
 
-        void IInboundPort.processInput(string input)
+        public void handleInput(string input)
         {
-            coreApp.processInput(input);
+            inboundPortApp.processInput(input);
         }
     }
 }

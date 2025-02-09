@@ -3,13 +3,12 @@ using Ports_and_Adapters_example.CoreApp;
 using Ports_and_Adapters_example.Infrastructure;
 
 ServiceCollection serviceCollection = new ServiceCollection();
-serviceCollection.AddSingleton<IInboundPort, InboundAdapter>();
+serviceCollection.AddSingleton<IInboundPort, CoreApplication>();
+serviceCollection.AddSingleton<InboundAdapter>();
 serviceCollection.AddSingleton<IOutboundPort, OutboundAdapter>();
-serviceCollection.AddSingleton<CoreApplication>(); 
 
 ServiceProvider serviceProvider =  serviceCollection.BuildServiceProvider();
 
-CoreApplication coreApp = serviceProvider.GetRequiredService<CoreApplication>();
-IInboundPort inboundPort = serviceProvider.GetRequiredService<IInboundPort>();
+InboundAdapter inboundAdapter= serviceProvider.GetRequiredService<InboundAdapter>();
 
-inboundPort.processInput("This is the Input.");
+inboundAdapter.handleInput("This is the Input.");
