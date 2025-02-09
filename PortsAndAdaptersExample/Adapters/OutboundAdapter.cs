@@ -1,8 +1,8 @@
-﻿using PortsAndAdaptersExample.CoreApp;
+﻿using PortsAndAdaptersExample.Ports;
 
-namespace PortsAndAdaptersExample.Infrastructure
+namespace PortsAndAdaptersExample.Adapters
 {
-    internal class OutboundAdapter: IOutboundPort
+    public class OutboundAdapter: IOutboundPort
     {
         public void processOutput(string output)
         {

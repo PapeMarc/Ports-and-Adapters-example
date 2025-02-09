@@ -1,6 +1,8 @@
-﻿namespace PortsAndAdaptersExample.CoreApp
+﻿using PortsAndAdaptersExample.Ports;
+
+namespace PortsAndAdaptersExample.Application
 {
-    internal class CoreApplication: IInboundPort
+    public class CoreApplication: IInboundPort
     {
         private IOutboundPort outboundPort;
         public CoreApplication(IOutboundPort outboundPort)

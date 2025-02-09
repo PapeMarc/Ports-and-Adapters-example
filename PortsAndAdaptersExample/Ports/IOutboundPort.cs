@@ -1,6 +1,6 @@
-﻿namespace PortsAndAdaptersExample.CoreApp
+﻿namespace PortsAndAdaptersExample.Ports
 {
-    internal interface IOutboundPort
+    public interface IOutboundPort
     {
         public void processOutput(string input);
     }
