@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Ports_and_Adapters_example.CoreApp;
-using Ports_and_Adapters_example.Infrastructure;
+using PortsAndAdaptersExample.Adapters;
+using PortsAndAdaptersExample.Application;
+using PortsAndAdaptersExample.Ports;
 
 ServiceCollection serviceCollection = new ServiceCollection();
 serviceCollection.AddSingleton<IInboundPort, CoreApplication>();
