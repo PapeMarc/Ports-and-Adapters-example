@@ -1,7 +1,7 @@
 Ports-and-Adapters Example (.NET 7)
 ===================================
 
-This project demonstrates the Ports and Adapters (Hexagonal) architecture pattern using .NET 7. It separates the core business logic from external systems through well-defined interfaces (ports) and adapters. The solution includes:
+This project demonstrates the Ports and Adapters (Hexagonal) architecture pattern from <a href="https://alistair.cockburn.us/hexagonal-architecture">Alistair Cockburn (2005)</a> using .NET 7. It separates the core business logic from external systems through well-defined interfaces (ports) and adapters. This solution includes:
 
 - CoreApplication: Implements business logic and communicates via inbound and outbound ports.
 - InboundAdapter: Receives input and forwards it to the core application.
